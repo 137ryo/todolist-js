@@ -58,9 +58,8 @@ button:hover {
 .list-row {
   display: flex;
   align-items: center;
-  padding-bottom: 4px;
 }
 
 .todo-title {
-  margin-right: 8px;
+  margin: 4px;
 }
