@@ -7,6 +7,7 @@ const onClickAdd = () => {
 
   // liタグを生成する
   const li = document.createElement("li");
+  li.className = "list-item";
 
   // divタグを生成する
   const div = document.createElement("div");
@@ -28,7 +29,10 @@ const onClickAdd = () => {
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "削除";
   deleteButton.addEventListener("click", () => {
-    alert("削除");
+    // 押された削除ボタンの親タグ(div)を未完了リストから削除
+    const deleteTarget = deleteButton.closest("li");
+    console.log(deleteTarget);
+    document.getElementById("incomplete-area").removeChild(deleteTarget);
   });
 
   // liタグの子要素にdivを追加
